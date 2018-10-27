@@ -65,7 +65,7 @@ public enum UIDeviceModel {
 public extension UIDeviceModel {
     
     public var unwrapIfSimulator: UIDeviceModel {
-        return DeviceModel.unwrapIfSimulator(self)
+        return UIDeviceModel.unwrapIfSimulator(self)
     }
     
     static private func unwrapIfSimulator(_ device: UIDeviceModel) -> UIDeviceModel {
