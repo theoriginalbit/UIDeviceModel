@@ -19,8 +19,10 @@ public enum UIDeviceModel {
     case iPadAir2
     case iPadPro9Inch
     case iPadPro10Inch
+    case iPadPro11Inch
     case iPadPro12Inch
     case iPadPro12Inch2
+    case iPadPro12Inch3
     case iPadMini
     case iPadMini2
     case iPadMini3
@@ -100,9 +102,13 @@ extension UIDeviceModel {
         switch identifier {
         case "iPad1,1": return .iPad
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4": return .iPad2
+        case "iPad2,5", "iPad2,6", "iPad2,7": return .iPadMini
         case "iPad3,1", "iPad3,2", "iPad3,3": return .iPad3
         case "iPad3,4", "iPad3,5", "iPad3,6": return .iPad4
         case "iPad4,1", "iPad4,2", "iPad4,3": return .iPadAir
+        case "iPad4,4", "iPad4,5", "iPad4,6": return .iPadMini2
+        case "iPad4,7", "iPad4,8", "iPad4,9": return .iPadMini3
+        case "iPad5,1", "iPad5,2": return .iPadMini4
         case "iPad5,3", "iPad5,4": return .iPadAir2
         case "iPad6,3", "iPad6,4": return .iPadPro9Inch
         case "iPad6,7", "iPad6,8": return .iPadPro12Inch
@@ -110,10 +116,8 @@ extension UIDeviceModel {
         case "iPad7,1", "iPad7,2": return .iPadPro12Inch2
         case "iPad7,3", "iPad7,4": return .iPadPro10Inch
         case "iPad7,5", "iPad7,6": return .iPad6
-        case "iPad2,5", "iPad2,6", "iPad2,7": return .iPadMini
-        case "iPad4,4", "iPad4,5", "iPad4,6": return .iPadMini2
-        case "iPad4,7", "iPad4,8", "iPad4,9": return .iPadMini3
-        case "iPad5,1", "iPad5,2": return .iPadMini4
+        case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4": return .iPadPro11Inch
+        case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8": return .iPadPro12Inch3
         
         case "iPhone1,1": return .iPhone
         case "iPhone1,2": return .iPhone3G

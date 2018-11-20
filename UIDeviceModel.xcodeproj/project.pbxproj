@@ -18,6 +18,8 @@
 		237B01B1216CCD9C00816AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		237B01BE216CCE8D00816AC8 /* UIDeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceModel.swift; sourceTree = "<group>"; };
 		237B01C0216CCF4B00816AC8 /* UIDevice+deviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+deviceModel.swift"; sourceTree = "<group>"; };
+		23E2330821A41D1F00630CBE /* UIDeviceModel.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIDeviceModel.podspec; sourceTree = "<group>"; };
+		23E2330921A41D1F00630CBE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +52,23 @@
 		237B01AF216CCD9C00816AC8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				237B01B1216CCD9C00816AC8 /* Info.plist */,
 				237B01C0216CCF4B00816AC8 /* UIDevice+deviceModel.swift */,
 				237B01B0216CCD9C00816AC8 /* UIDeviceModel.h */,
 				237B01BE216CCE8D00816AC8 /* UIDeviceModel.swift */,
+				237B01B1216CCD9C00816AC8 /* Info.plist */,
+				23E2330721A41CFE00630CBE /* Pod */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		23E2330721A41CFE00630CBE /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				23E2330921A41D1F00630CBE /* README.md */,
+				23E2330821A41D1F00630CBE /* UIDeviceModel.podspec */,
+			);
+			name = Pod;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +109,7 @@
 		237B01A4216CCD9C00816AC8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = theoriginalbit;
 				TargetAttributes = {
