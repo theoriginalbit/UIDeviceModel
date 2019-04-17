@@ -9,9 +9,7 @@
 import UIKit
 
 public extension UIDevice {
-    
-    public var deviceModel: UIDeviceModel {
+    var deviceModel: UIDeviceModel {
         return UIDeviceModel.current
     }
-    
 }

@@ -27,7 +27,7 @@ public enum UIDeviceModel {
     case iPadMini2
     case iPadMini3
     case iPadMini4
-    
+
     /// Also known as iPhone 2G
     case iPhone
     case iPhone3G
@@ -50,44 +50,40 @@ public enum UIDeviceModel {
     case iPhoneXS
     case iPhoneXSMax
     case iPhoneXR
-    
+
     case iPodTouch
     case iPodTouch2
     case iPodTouch3
     case iPodTouch4
     case iPodTouch5
     case iPodTouch6
-    
+
     indirect case simulator(UIDeviceModel)
     /// Device is not yet known or implemented
     case unknown(String)
-    
 }
 
 public extension UIDeviceModel {
-    
-    public var unwrapIfSimulator: UIDeviceModel {
+    var unwrapIfSimulator: UIDeviceModel {
         return UIDeviceModel.unwrapIfSimulator(self)
     }
-    
-    static private func unwrapIfSimulator(_ device: UIDeviceModel) -> UIDeviceModel {
+
+    private static func unwrapIfSimulator(_ device: UIDeviceModel) -> UIDeviceModel {
         if case let .simulator(model) = device {
             return model
         }
         return device
     }
-    
 }
 
 // MARK: - Mapping from Identifier
 
 extension UIDeviceModel {
-    
     static var current: UIDeviceModel {
         return mapToDevice(identifier: identifier)
     }
-    
-    static private var identifier: String = {
+
+    private static var identifier: String = {
         var systemInfo = utsname()
         uname(&systemInfo)
         let mirror = Mirror(reflecting: systemInfo.machine)
@@ -97,8 +93,8 @@ extension UIDeviceModel {
         }
         return identifier
     }()
-    
-    static private func mapToDevice(identifier: String) -> UIDeviceModel {
+
+    private static func mapToDevice(identifier: String) -> UIDeviceModel {
         switch identifier {
         case "iPad1,1": return .iPad
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4": return .iPad2
@@ -118,7 +114,7 @@ extension UIDeviceModel {
         case "iPad7,5", "iPad7,6": return .iPad6
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4": return .iPadPro11Inch
         case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8": return .iPadPro12Inch3
-        
+
         case "iPhone1,1": return .iPhone
         case "iPhone1,2": return .iPhone3G
         case "iPhone2,1": return .iPhone3GS
@@ -140,18 +136,16 @@ extension UIDeviceModel {
         case "iPhone11,2": return .iPhoneXS
         case "iPhone11,4", "iPhone11,6": return .iPhoneXSMax
         case "iPhone11,8": return .iPhoneXR
-        
+
         case "iPod1,1": return .iPodTouch
         case "iPod2,1": return .iPodTouch2
         case "iPod3,1": return .iPodTouch3
         case "iPod4,1": return .iPodTouch4
         case "iPod5,1": return .iPodTouch5
         case "iPod7,1": return .iPodTouch6
-        
+
         case "i386", "x86_64": return .simulator(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))
         default: return .unknown(identifier)
         }
     }
-    
 }
-
