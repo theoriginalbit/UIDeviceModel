@@ -58,6 +58,7 @@ public enum UIDeviceModel {
     case iPodTouch4
     case iPodTouch5
     case iPodTouch6
+    case iPodTouch7
 
     indirect case simulator(UIDeviceModel)
 
@@ -147,6 +148,7 @@ extension UIDeviceModel {
         case "iPod4,1": return .iPodTouch4
         case "iPod5,1": return .iPodTouch5
         case "iPod7,1": return .iPodTouch6
+        case "iPod9,1": return .iPodTouch7
 
         case "i386", "x86_64": return .simulator(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))
         default: return .unknown(identifier)
