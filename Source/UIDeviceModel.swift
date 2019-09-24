@@ -51,6 +51,9 @@ public enum UIDeviceModel {
     case iPhoneXS
     case iPhoneXSMax
     case iPhoneXR
+    case iPhone11
+    case iPhone11Pro
+    case iPhone11ProMax
 
     case iPodTouch
     case iPodTouch2
@@ -141,6 +144,9 @@ extension UIDeviceModel {
         case "iPhone11,2": return .iPhoneXS
         case "iPhone11,4", "iPhone11,6": return .iPhoneXSMax
         case "iPhone11,8": return .iPhoneXR
+        case "iPhone12,1": return .iPhone11
+        case "iPhone12,3": return .iPhone11Pro
+        case "iPhone12,5": return .iPhone11ProMax
 
         case "iPod1,1": return .iPodTouch
         case "iPod2,1": return .iPodTouch2
