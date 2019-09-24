@@ -17,6 +17,7 @@ public enum UIDeviceModel {
     case iPad6
     case iPadAir
     case iPadAir2
+    case iPadAir3
     case iPadPro9Inch
     case iPadPro10Inch
     case iPadPro11Inch
@@ -27,9 +28,9 @@ public enum UIDeviceModel {
     case iPadMini2
     case iPadMini3
     case iPadMini4
+    case iPadMini5
 
-    /// Also known as iPhone 2G
-    case iPhone
+    case iPhone // Also known as iPhone 2G
     case iPhone3G
     case iPhone3GS
     case iPhone4
@@ -59,7 +60,8 @@ public enum UIDeviceModel {
     case iPodTouch6
 
     indirect case simulator(UIDeviceModel)
-    /// Device is not yet known or implemented
+
+    // Device is not yet known or implemented
     case unknown(String)
 }
 
@@ -114,6 +116,8 @@ extension UIDeviceModel {
         case "iPad7,5", "iPad7,6": return .iPad6
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4": return .iPadPro11Inch
         case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8": return .iPadPro12Inch3
+        case "iPad11,1", "iPad11,2": return .iPadMini5
+        case "iPad11,3", "iPad11,4": return .iPadAir3
 
         case "iPhone1,1": return .iPhone
         case "iPhone1,2": return .iPhone3G
