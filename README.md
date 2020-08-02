@@ -1,37 +1,22 @@
 # UIDeviceModel
 
-[![Language](https://img.shields.io/badge/swift-4.2-orange.svg)](https://swift.org/)
-[![License](https://img.shields.io/github/license/theoriginalbit/UIDeviceModel.svg)](LICENSE)
-[![Pod Version](https://img.shields.io/cocoapods/v/UIDeviceModel.svg)](https://cocoapods.org/pods/UIDeviceModel)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
-
 A µframework to detect the device model provided through an extension of `UIDevice`. It also allows detection of the simulator and the device model it is simulating.
 
 ## Installation
 
-### CocoaPods
+### Swift Package Manager
 
-```ruby
-pod 'UIDeviceModel', '~> 1.0'
-```
-
-### Carthage
-
-```ogdl
-github "theoriginalbit/UIDeviceModel"
+```swift
+.package(url: "https://github.com/theoriginalbit/UIDeviceModel.git", .upToNextMajor(from: "3.0.0"))
 ```
 
 ## Usage
 
-First import the framework:
-
-```swift
-import UIDeviceModel
-```
-
 Common usage would be to use in a switch statement
 
 ```swift
+import UIDeviceModel
+
 let deviceModel = UIDevice.current.deviceModel
 
 switch deviceModel {
