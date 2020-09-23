@@ -9,7 +9,6 @@
 import Foundation
 
 public enum UIDeviceModel {
-    case iPad
     case iPad2
     case iPad3
     case iPad4
@@ -32,10 +31,6 @@ public enum UIDeviceModel {
     case iPadMini4
     case iPadMini5
 
-    case iPhone // Also known as iPhone 2G
-    case iPhone3G
-    case iPhone3GS
-    case iPhone4
     case iPhone4s
     case iPhone5
     case iPhone5c
@@ -58,10 +53,6 @@ public enum UIDeviceModel {
     case iPhone11ProMax
     case iPhoneSE2
 
-    case iPodTouch
-    case iPodTouch2
-    case iPodTouch3
-    case iPodTouch4
     case iPodTouch5
     case iPodTouch6
     case iPodTouch7
@@ -105,7 +96,6 @@ extension UIDeviceModel {
 
     private static func mapToDevice(identifier: String) -> UIDeviceModel {
         switch identifier {
-        case "iPad1,1": return .iPad
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4": return .iPad2
         case "iPad2,5", "iPad2,6", "iPad2,7": return .iPadMini
         case "iPad3,1", "iPad3,2", "iPad3,3": return .iPad3
@@ -128,10 +118,6 @@ extension UIDeviceModel {
         case "iPad11,1", "iPad11,2": return .iPadMini5
         case "iPad11,3", "iPad11,4": return .iPadAir3
 
-        case "iPhone1,1": return .iPhone
-        case "iPhone1,2": return .iPhone3G
-        case "iPhone2,1": return .iPhone3GS
-        case "iPhone3,1", "iPhone3,2", "iPhone3,3": return .iPhone4
         case "iPhone4,1": return .iPhone4s
         case "iPhone5,1", "iPhone5,2": return .iPhone5
         case "iPhone5,3", "iPhone5,4": return .iPhone5c
@@ -154,10 +140,6 @@ extension UIDeviceModel {
         case "iPhone12,5": return .iPhone11ProMax
         case "iPhone12,8": return .iPhoneSE2
 
-        case "iPod1,1": return .iPodTouch
-        case "iPod2,1": return .iPodTouch2
-        case "iPod3,1": return .iPodTouch3
-        case "iPod4,1": return .iPodTouch4
         case "iPod5,1": return .iPodTouch5
         case "iPod7,1": return .iPodTouch6
         case "iPod9,1": return .iPodTouch7
