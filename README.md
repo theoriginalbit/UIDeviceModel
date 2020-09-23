@@ -2,6 +2,8 @@
 
 A µframework to detect the device model provided through an extension of `UIDevice`. It also allows detection of the simulator and the device model it is simulating.
 
+Device identifier information sourced from [the iPhone wiki](https://www.theiphonewiki.com/wiki/Models) and limited to devices that are supported by the target versions.
+
 ## Installation
 
 ### Swift Package Manager

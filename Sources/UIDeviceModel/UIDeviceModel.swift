@@ -21,9 +21,11 @@ public enum UIDeviceModel {
     case iPadPro9Inch
     case iPadPro10Inch
     case iPadPro11Inch
+    case iPadPro11Inch2
     case iPadPro12Inch
     case iPadPro12Inch2
     case iPadPro12Inch3
+    case iPadPro12Inch4
     case iPadMini
     case iPadMini2
     case iPadMini3
@@ -54,6 +56,7 @@ public enum UIDeviceModel {
     case iPhone11
     case iPhone11Pro
     case iPhone11ProMax
+    case iPhoneSE2
 
     case iPodTouch
     case iPodTouch2
@@ -120,6 +123,8 @@ extension UIDeviceModel {
         case "iPad7,5", "iPad7,6": return .iPad6
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4": return .iPadPro11Inch
         case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8": return .iPadPro12Inch3
+        case "iPad8,9", "iPad8,10": return .iPadPro11Inch2
+        case "iPad8,11", "iPad8,12": return .iPadPro12Inch4
         case "iPad11,1", "iPad11,2": return .iPadMini5
         case "iPad11,3", "iPad11,4": return .iPadAir3
 
@@ -147,6 +152,7 @@ extension UIDeviceModel {
         case "iPhone12,1": return .iPhone11
         case "iPhone12,3": return .iPhone11Pro
         case "iPhone12,5": return .iPhone11ProMax
+        case "iPhone12,8": return .iPhoneSE2
 
         case "iPod1,1": return .iPodTouch
         case "iPod2,1": return .iPodTouch2
