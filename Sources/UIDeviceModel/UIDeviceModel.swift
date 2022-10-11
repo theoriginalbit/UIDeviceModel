@@ -33,6 +33,11 @@ public enum UIDeviceModel {
     case iPadMini3
     case iPadMini4
     case iPadMiniGen5
+    case iPadGen9
+    case iPadPro11InchGen3
+    case iPadPro12_9InchGen5
+    case iPadAirGen5
+    case iPadMiniGen6
 
     case iPhone4s
     case iPhone5
@@ -55,10 +60,19 @@ public enum UIDeviceModel {
     case iPhone11Pro
     case iPhone11ProMax
     case iPhoneSEGen2
-    case iPhone12mini
+    case iPhone12Mini
     case iPhone12
     case iPhone12Pro
     case iPhone12ProMax
+    case iPhone13Mini
+    case iPhone13
+    case iPhone13Pro
+    case iPhone13ProMax
+    case iPhoneSEGen3
+    case iPhone14
+    case iPhone14Plus
+    case iPhone14Pro
+    case iPhone14ProMax
 
     case iPodTouch5
     case iPodTouch6
@@ -126,7 +140,12 @@ extension UIDeviceModel {
         case "iPad11,1", "iPad11,2": return .iPadMiniGen5
         case "iPad11,3", "iPad11,4": return .iPadAirGen3
         case "iPad11,6", "iPad11,7": return .iPadGen8
+        case "iPad12,1", "iPad12,2": return .iPadGen9
         case "iPad13,1", "iPad13,2": return .iPadAirGen4
+        case "iPad13,4", "iPad13,5", "iPad13,6", "iPad13,7": return iPadPro11InchGen3
+        case "iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11": return iPadPro12_9InchGen5
+        case "iPad13,16", "iPad13,17": return .iPadAirGen5
+        case "iPad14,1", "iPad14,2": return .iPadMiniGen6
 
         case "iPhone4,1": return .iPhone4s
         case "iPhone5,1", "iPhone5,2": return .iPhone5
@@ -149,10 +168,19 @@ extension UIDeviceModel {
         case "iPhone12,3": return .iPhone11Pro
         case "iPhone12,5": return .iPhone11ProMax
         case "iPhone12,8": return .iPhoneSEGen2
-        case "iPhone13,1": return .iPhone12mini
+        case "iPhone13,1": return .iPhone12Mini
         case "iPhone13,2": return .iPhone12
         case "iPhone13,3": return .iPhone12Pro
         case "iPhone13,4": return .iPhone12ProMax
+        case "iPhone14,4": return .iPhone13Mini
+        case "iPhone14,5": return .iPhone13
+        case "iPhone14,2": return .iPhone13Pro
+        case "iPhone14,3": return .iPhone13ProMax
+        case "iPhone14,6": return .iPhoneSEGen3
+        case "iPhone14,7": return .iPhone14
+        case "iPhone14,8": return .iPhone14Plus
+        case "iPhone15,2": return .iPhone14Pro
+        case "iPhone15,3": return .iPhone14ProMax
 
         case "iPod5,1": return .iPodTouch5
         case "iPod7,1": return .iPodTouch6
